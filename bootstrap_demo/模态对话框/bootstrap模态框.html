@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>Test</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!--删除按钮-->
+	<p><a id="isDelete" class="btn btn-primary btn-large">确定删除</a></p>
+</div>
+
+
+<!--模态框结构-->
+<div id="dialog" class="modal fade"
+    data-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close"
+                    data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+                <div class="modal-title">删除信息</div>
+            </div>
+            <div class="modal-body">
+               		是否删除：<span id="spDel"></span>?
+            </div>
+            <div class="modal-footer">
+                 <!--<a href="#" class="btn btn-success">确定</a>
+				 <a href="#" class="btn btn-default" data-dismiss="modal">取消</a>
+				 -->
+				<button id="btnDel"  class="btn btn-danger"> 确定</button>
+                <button class="btn btn-info" data-dismiss="modal"> 取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	 $(function ()  { 
+		 $("#isDelete").click(function(){
+			$("#dialog").modal();  
+		 });
+	 });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Bootstrap 实例</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="F:/Kang/bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+<script src="F:/Kang/bootstrap/bootstrap-3.3.7-dist/js/jquery.min.js"></script>
+<script src="F:/Kang/bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!--
+		1、如果需要创建一个表单，它的所有元素是内联的，向左对齐的，标签是并排的，请向 <form> 标签添加 class .form-inline。
+		2、默认情况下，Bootstrap 中的 input、select 和 textarea 有 100% 宽度。在使用内联表单时，您需要在表单控件上设置一个宽度。
+		3、使用 class .sr-only，您可以隐藏内联表单的标签。
+	-->
+	<div class="container">
+	<form role="form" class="form-inline">
+		<div class="form-group">
+			<label for="name" class="sr-only">名称</label> 
+			<input type="text" id="name"
+				placeholder="请输入名称" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label for="name" class="sr-only">文件输入</label>
+			<input type="file" id="inputfile" />
+		</div>
+		<div class="checkbox">
+			<label>
+				<input  type="checkbox"/>请打勾
+			</label>
+		</div>
+		<button type="submit" class="btn btn-default">提交</button>
+	</form>
+</div>
+
+</body>
+</html>

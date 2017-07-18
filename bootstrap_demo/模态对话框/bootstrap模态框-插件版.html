@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="jquery.dialogk.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<!--删除按钮-->
+		<p>
+			<a id="isDelete" class="btn btn-primary btn-large">确定删除</a>
+		</p>
+	</div>
+	<script>
+		$(function() {
+			$("#isDelete").click(function() {
+				/**
+				 *  title - 标题
+				 *  body - 内容
+				 *  event - 确认按钮的点击事件
+				 */
+				$.ksfDialog({
+					"title" : "删除提示",
+					"body" : "确认删除吗？",
+					"event" : function() {
+						$("#h_show").remove();
+						//window.location="http://www.baidu.com";
+					}
+				});
+			});
+		});
+	</script>
+
+	<h1 id="h_show">我是一行字</h1>
+</body>
+</html>
